@@ -1,6 +1,6 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
-import { MenuItem } from './menu-item.component';
+import { MenuItem } from '@app/modules/menu/components/menu-item/menu-item.component';
 
 // Опишіть метадані для вашої історії
 const meta: Meta = {
