@@ -1,7 +1,11 @@
+import React from 'react';
+import { Admin } from 'react-admin';
 
-
-export const App = () => {
+export const  App = () => {
   return (
-    <h1>🍕 PizzaStack</h1>
+    <>
+      <Admin/>
+    </>
   );
-};
+}
+
