@@ -1,18 +1,22 @@
-import React from 'react';
-import pizzaMenu from '@app/mocks/pizza.json';
+import React, {FC} from 'react';
 import { MenuItem } from '@app/modules/menu/components/menu-item/menu-item.component';
+import {Pizza} from '@app/modules/menu/types/pizza';
 
-export const MenuList = () => {
+interface MenuListProps {
+    items: Pizza[];
+}
+
+export const MenuList: FC<MenuListProps> = ({items}) => {
     return (
         <div className='flex flex-wrap gap-10'>
-            {pizzaMenu.map((pizza) => (
+            {items.map(({image, ...pizza}) => (
                 <MenuItem
                     key={pizza.id}
                     title={pizza.title}
                     weight={pizza.weight}
                     ingredients={pizza.ingredients}
                     price={pizza.price}
-                    imagePath={'/assets/pizza/' + pizza.image}
+                    imagePath={'/assets/pizza/' + image} 
                 />
             ))}
         </div>
